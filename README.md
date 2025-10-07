@@ -5,6 +5,7 @@
 This repository demonstrates containerizing a Next.js application, automating its build and deployment using **GitHub Actions** and **GitHub Container Registry (GHCR)**, and deploying it to **Kubernetes (Minikube)**.
 
 
+
 ## **Table of Contents**
 
 1. [Next.js Application](#nextjs-application)
@@ -13,6 +14,7 @@ This repository demonstrates containerizing a Next.js application, automating it
 4. [Kubernetes Deployment](#kubernetes-deployment)
 5. [Accessing the App](#accessing-the-app)
 6. [Repository & Image Links](#repository--image-links)
+
 
 
 ## **Next.js Application**
@@ -26,6 +28,7 @@ npm run dev
 ```
 
 * The app runs at: [http://localhost:3000](http://localhost:3000)
+
 
 
 ## **Docker**
@@ -42,6 +45,7 @@ docker build -t wexaai-nextjs .
 ```bash
 docker run -p 3000:3000 wexaai-nextjs
 ```
+
 
 
 ## **CI/CD with GitHub Actions**
@@ -61,6 +65,7 @@ docker run -p 3000:3000 wexaai-nextjs
 ```
 ghcr.io/sunloid/wexaai-devops-assessment:latest
 ```
+
 
 
 ## **Kubernetes Deployment**
@@ -88,10 +93,12 @@ kubectl set image deployment/nextjs-deployment nextjs-app=ghcr.io/sunloid/wexaai
 ```
 
 
+
 ## **Accessing the App**
 
 * Locally via browser after `minikube service nextjs-service`.
 * Kubernetes exposes it on a NodePort mapped by Minikube.
+
 
 
 ## **Repository & Image Links**
@@ -107,6 +114,3 @@ https://github.com/sunloid/wexaai-devops-assessment
 ```
 ghcr.io/sunloid/wexaai-devops-assessment:latest
 ```
-
-
-
