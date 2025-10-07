@@ -1,1 +1,0 @@
-# wexaai-devops-assessment
